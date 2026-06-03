@@ -2,14 +2,20 @@
 #include <string>
 using namespace std;
 int main() {
-    string name="Ramsey Anokye";
-    int age=20;
-    float GPA=85.5;
-    bool isStudent=true;
-    
-    cout << "Name: " << name << endl;
-    cout << "Age: " << age << endl;
-    cout << "GPA: " << GPA << endl;
-    cout << "Student: " << boolalpha << isStudent << endl;
+    string name;
+    int age;
+    string subject;
+    cout << "Enter your name: ";
+    getline(cin, name);
+    cout << "Enter your age: ";
+    cin >> age;
+    cout << "Enter your favorite subject: ";
+    cin.ignore();
+    getline(cin, subject);
+    cout << "Hello, " << name << "!" << endl;
+    cout << "You are " << age << " years old." << endl;
+    cout << "Your favorite subject is " << subject << "." << endl;
     return 0;
 }
+
+
